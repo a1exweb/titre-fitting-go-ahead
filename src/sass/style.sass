@@ -1,0 +1,210 @@
+$orange: darken(orange, 5%)
+*
+    box-sizing: border-box
+    outline: none
+body
+    background: url("../images/bg.jpg") no-repeat
+    background-size: cover
+    margin: 0
+    font-family: sans-serif
+.container
+    max-width: 717px
+    margin: auto
+.menu
+    display: flex
+    padding: 0
+    height: 50px
+    margin: 0
+    line-height: 50px
+    &-down
+        display: flex
+        padding: 0
+        list-style: none
+        &-wrap
+            list-style: none
+            padding: 0
+    &-burger-btn
+        width: 50px
+        height: 50px
+        display: flex
+        justify-content: center
+        background: transparent
+        border: 0
+        cursor: pointer
+        &__image
+            height: 50px
+            width: 25px
+    &-mobile
+        width: max-content
+        height: 50px
+        display: none
+    &__item
+        list-style: none
+    &__link
+        position: relative
+        display: flex
+        padding: 0 20px
+        color: $orange
+        text-decoration: none
+        z-index: 1
+        &::after
+            position: absolute
+            content: ''
+            background-color: $orange
+            top: 50px
+            left: 0
+            height: 0%
+            width: 100%
+            z-index: -1
+            transition: .2s
+        &:hover::after
+            top: 0
+            height: 100%
+        &:hover
+            height: auto
+            color: #fff
+.navbar
+    height: 50px
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &-wrap
+        background-color: #fff
+    &__menu
+        margin-left: 20px
+    &__button
+        margin-right: 20px
+.button
+    height: 30px
+    padding: 0px 15px
+    background-color: transparent
+    color: $orange
+    font-weight: bold
+    line-height: 26px
+    text-decoration: none
+    cursor: pointer
+    transition: .2s
+    border: 2px solid $orange
+    &:hover
+        background-color: $orange
+        color: #fff
+    &:active
+        border: 2px solid #fff
+    &_feedback
+        width: 100%
+        justify-content: center
+.logo
+    display: flex
+    margin: auto
+    width: 100%
+    max-width: 717px
+    padding: 0 20px
+.main
+    padding: 20px
+.content
+    display: flex
+    &__form
+        margin-bottom: 20px
+.sidebar
+    padding: 14px
+    max-width: 220px
+    width: 100%
+    margin-right: 20px
+    background-color: #fff
+    border: 1px solid #eee
+    &__title
+        background: url('../images/new_icon.png') no-repeat center left
+        padding-left: 15px
+        margin: 0
+        color: darken($orange, 20%)
+    &__date
+        color: $orange
+        font-weight: bold
+        margin: 10px 0
+    &__description
+        margin: 0
+.article
+    &__main-title
+        margin: 0
+        font-weight: normal
+        color: darken($orange, 30%)
+.text-strong
+    display: block
+    font-weight: bold
+    margin-bottom: 3px
+.footer
+    background-color: #333
+    width: 100%
+    &__copy
+        font-size: .7em
+        text-align: center
+        padding: 15px 0
+        color: #78d007
+        margin: 0
+    &__link
+        color: #78d007
+        font-weight: bold
+.article
+    margin-bottom: 20px
+    max-width: 440px
+    width: max-content
+    &__link
+        color: darken($orange, 30%)
+        font-weight: bold
+    &__table
+        margin-bottom: 20px
+    &__text
+        display: block
+        margin-top: 10px
+.table
+    background-color: #fff
+    border: 3px solid $orange
+    border-spacing: 0
+    width: max-content
+    &-wrap
+        overflow-x: scroll
+    &__col
+        padding: 5px
+        border: 1px solid $orange
+    &__string
+        &_name
+            background-color: lighten($orange,20%)
+            font-weight: bold
+        &_value
+            &:nth-child(odd)
+                background-color: lighten($orange, 40%)
+.form
+    padding: 14px
+    height: max-content
+    width: max-content
+    width: 100%
+    background-color: #fff
+    border: 1px solid #ccc
+    &__main-title
+        margin: 0
+        margin-bottom: 20px
+        font-weight: normal
+        color: $orange
+.group-block
+    display: flex
+    flex-direction: column
+.label
+    font-weight: bold
+    cursor: pointer
+.feedback
+    &__label
+        margin: 5px 0
+    &__button
+        margin-top: 10px
+.textarea
+    resize: none
+.input, .textarea
+    padding: 10px
+    border: 2px solid lighten($orange, 30%)
+    transition: .2s
+    &:hover, &:focus
+        background-color: lighten($orange, 30%)
+    &:focus
+        border: 2px solid #fff
+@import 'media'
